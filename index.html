@@ -1,0 +1,270 @@
+<html>
+    <div id="ball1" style="
+    z-index:1;
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    border: 0px solid #F9E6B2;
+    background:#FFFFEE"></div>
+  
+  <div id="ball2" style="
+  z-index:2;
+  position:absolute;
+  left: 0px;
+  top:0px;
+  width:500px;
+  height:500px;
+  border-radius:20%; background:#FFC3C3"></div>
+  
+  <div id="ball3" style="
+  z-index:3;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:500px;
+  height:500px;
+  border-radius:100%;
+  background:#FFAAAA"></div>
+  
+  <div id="ball4" style="
+  z-index:4;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:500px;
+  height:500px;
+  border-radius:1%;
+  background:#FFE0D7"></div>
+  
+  <head>
+    <title>Simulation - ball movement</title>
+  </head>
+ 
+  <body>
+    <p></p>
+    
+    <!-- YOUR CODE STARTS HERE -->
+    <script>
+
+        //BALL1
+        
+        var velocityX = 5;
+        var velocityY = 5;
+        var positionX = 0;
+        var positionY = 0;
+        var time = 30;
+        var ball1 = document.getElementById('ball1');
+        var reverseX = false;
+        var reverseY = false;
+        
+        
+        var velocityX2 = 4;
+        var velocityY2 = 4;
+        var positionX2 = 600;
+        var positionY2 = 0;
+        var ball2 = document.getElementById('ball2');
+        var reverseX2 = false;
+        var reverseY2 = false;
+        
+        var velocityX3 = 3;
+        var velocityY3 = 3;
+        var positionX3 = 0;
+        var positionY3 = 0;
+        var ball3 = document.getElementById('ball3');
+        var reverseX3 = false;
+        var reverseY3 = false;
+        
+        var velocityX4 = 2;
+        var velocityY4 = 2;
+        var positionX4 = 0;
+        var positionY4 = 0;
+        var ball4 = document.getElementById('ball4');
+        var reverseX4 = false;
+        var reverseY4 = false;
+        
+        var initialpositionx = 0;
+        var finalpositionx = 1000;
+        var initialpositiony = 0;
+        var finalpositiony = 500;
+        var initialpositionx2 = 600;
+        var finalpositionx2 = 900;
+        var initialpositiony2 = 0;
+        var finalpositiony2 = 500;
+        
+        // YOUR CODE 
+        // *As a next step, you'll make this movement two 
+        // dimensional. Build-in edge detection and reverse the 
+        // velocity on both the x- and y-axes.
+        
+        var bouncingball1 = function(){
+          
+        
+          if(reverseX){
+            positionX = positionX - velocityX;
+            ball1.style.left = positionX + "px";
+          } else {
+            positionX = positionX + velocityX;
+            ball1.style.left = positionX + "px";
+          }
+        
+          if( positionX > finalpositionx || 
+              positionX === initialpositionx 
+          ) {
+            reverseX = !reverseX;
+          }
+          if(reverseY){
+            positionY = positionY - velocityY;
+            ball1.style.top = positionY + "px";
+          } else {
+            positionY = positionY + velocityY;
+            ball1.style.top = positionY + "px";
+          }
+          if( 
+              positionY > finalpositiony ||
+              positionY === initialpositiony
+            ){
+              reverseY = !reverseY;
+            }
+        
+        };
+         
+        
+         //BALL2
+        
+        
+        
+        
+        // YOUR CODE 
+        // *As a next step, you'll make this movement two 
+        // dimensional. Build-in edge detection and reverse the 
+        // velocity on both the x- and y-axes.
+        
+        var bouncingball2 = function(){
+        
+        
+          if(reverseX2){
+            positionX2 = positionX2 - velocityX2;
+            ball2.style.left = positionX2 + "px";
+          } else {
+            positionX2 = positionX2 + velocityX2;
+            ball2.style.left = positionX2 + "px";
+          }
+        
+          if( positionX2 > finalpositionx2 || 
+              positionX2 === initialpositionx2
+          ) {
+            reverseX2 = !reverseX2;
+          }
+          if(reverseY2){
+            positionY2 = positionY2 - velocityY2;
+            ball2.style.top = positionY2 + "px";
+          } else {
+            positionY2 = positionY2 + velocityY2;
+            ball2.style.top = positionY2 + "px";
+          }
+          if( 
+              positionY2 > finalpositiony2 ||
+              positionY2 === initialpositiony2
+            ){
+              reverseY2 = !reverseY2;
+            }
+        
+        };
+        
+        
+         //BALL3
+        
+         
+        
+        // YOUR CODE 
+        // *As a next step, you'll make this movement two 
+        // dimensional. Build-in edge detection and reverse the 
+        // velocity on both the x- and y-axes.
+        
+        var bouncingball3 = function(){
+        
+        
+          if(reverseX3){
+            positionX3 = positionX3 - velocityX3;
+            ball3.style.left = positionX3 + "px";
+          } else {
+            positionX3 = positionX3 + velocityX3;
+            ball3.style.left = positionX3 + "px";
+          }
+        
+          if( positionX3 > finalpositionx || 
+              positionX3 === initialpositionx
+          ) {
+            reverseX3 = !reverseX3;
+          }
+          if(reverseY3){
+            positionY3 = positionY3 - velocityY3;
+            ball3.style.top = positionY3 + "px";
+          } else {
+            positionY3 = positionY3 + velocityY3;
+            ball3.style.top = positionY3 + "px";
+          }
+          if( 
+              positionY3 > finalpositiony ||
+              positionY3 === initialpositiony
+            ){
+              reverseY3 = !reverseY3;
+            }
+        
+        };
+        
+        
+         //BALL4
+        
+        
+        // YOUR CODE 
+        // *As a next step, you'll make this movement two 
+        // dimensional. Build-in edge detection and reverse the 
+        // velocity on both the x- and y-axes.
+        
+        var bouncingball4 = function(){
+        
+        
+          if(reverseX4){
+            positionX4 = positionX4 - velocityX4;
+            ball4.style.left = positionX4 + "px";
+          } else {
+            positionX4 = positionX4 + velocityX4;
+            ball4.style.left = positionX4 + "px";
+          }
+        
+          if( positionX4 > finalpositionx || 
+              positionX4 === initialpositionx
+          ) {
+            reverseX4 = !reverseX4;
+          }
+          if(reverseY4){
+            positionY4 = positionY4 - velocityY4;
+            ball4.style.top = positionY4 + "px";
+          } else {
+            positionY4 = positionY4 + velocityY4;
+            ball4.style.top = positionY4 + "px";
+          }
+          if( 
+              positionY4 > finalpositiony ||
+              positionY4 === initialpositiony
+            ){
+              reverseY4 = !reverseY4;
+            }
+        
+        };
+        
+        setInterval(bouncingball1, time);
+        setInterval(bouncingball2,time);
+        setInterval(bouncingball3, time);
+        setInterval(bouncingball4,time);
+        
+        </script>
+    <!-- YOUR CODE ENDS HERE -->
+  </body>
+  
+
+</html>
