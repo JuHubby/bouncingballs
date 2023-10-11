@@ -17,12 +17,12 @@ For this excersice I  use JavaScript language. This is a dynamic and engaging an
 
 This code creates a visually captivating and endless loop of bouncing figures that can be used for both entertainment, comercial, and educational purposes. for example:
 
-- Homepage Animation
-- Loading Screen
-- Product Showcases
-- Interactive Banners
-- Background Animation
-- Interactive Tutorials
+ - Homepage Animation
+ - Loading Screen
+ - Product Showcases
+ - Interactive Banners
+ - Background Animation
+ - Interactive Tutorials
 
 ## Support:
 
