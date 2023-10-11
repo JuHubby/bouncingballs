@@ -16,6 +16,7 @@ For this excersice I  use JavaScript language. This is a dynamic and engaging an
 ## Usage:
 
 This code creates a visually captivating and endless loop of bouncing figures that can be used for both entertainment, comercial, and educational purposes. for example:
+
 -Homepage Animation
 -Loading Screen
 -Product Showcases
@@ -29,7 +30,7 @@ I'm here to help, and I'm just a message away. If you have questions, need assis
 
 ## Roadmap:
 
-I  am planning some improvements for this project such as: creation of more multiple figures (e.g. triangles) and update shape Variability, where I could customize the shapes of the bouncing figures to switch between different shapes and colors, allowing for an ever-changing visual experience. Also, I am planning to add a translucid effect everytime the figures overlap. And definitaly, creating a Interactive Control of the animation controlled by bottoms such as start, pause, and adjust the animation speed.
+I am planning some improvements for this project, such as the creation of multiple figures (e.g., triangles) and updating shape variability. This update will allow users to customize the shapes of the bouncing figures, enabling them to switch between different shapes and colors, creating an ever-changing visual experience. Additionally, I plan to add a translucent effect whenever the figures overlap. Lastly, I will definitely create interactive control for the animation, which can be controlled by buttons for functions like starting, pausing, and adjusting the animation speed.
 
 ## License information: 
 
