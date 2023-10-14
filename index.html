@@ -4,10 +4,11 @@
     position:absolute;
     left:0px;
     top:0px;
-    width:500px;
-    height:500px;
+    width:150px;
+    height:150px;
     border-radius:50%;
     border: 0px solid #F9E6B2;
+    box-shadow: 10px 10px 5px lightgray;
     background:#FFFFEE"></div>
   
   <div id="ball2" style="
@@ -15,18 +16,22 @@
   position:absolute;
   left: 0px;
   top:0px;
-  width:500px;
-  height:500px;
-  border-radius:20%; background:#FFC3C3"></div>
+  width:150px;
+  height:150px;
+  box-shadow: 10px 10px 5px lightgray;
+  border-radius:20%; background:#FFC3C3"
+  ></div>
+</div>
   
   <div id="ball3" style="
   z-index:3;
   position:absolute;
   left:0px;
   top:0px;
-  width:500px;
-  height:500px;
+  width:150px;
+  height:150px;
   border-radius:100%;
+  box-shadow: 10px 10px 5px lightgray;
   background:#FFAAAA"></div>
   
   <div id="ball4" style="
@@ -34,18 +39,19 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:500px;
-  height:500px;
+  width:150px;
+  height:150px;
   border-radius:1%;
+  box-shadow: 10px 10px 5px lightgray;
   background:#FFE0D7"></div>
   
   <head>
     <style>
       body, html {
-    height: 10%;
-    margin: 10%;
-    font-family: Arial, Helvetica, sans-serif;
-      }
+        height: 10%;
+        margin: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
     </style>  
     <title>Simulation - ball movement</title>
   </head>
@@ -61,7 +67,7 @@
         
         var velocityX = 5;
         var velocityY = 5;
-        var positionX = 0;
+        var positionX = 400;
         var positionY = 0;
         var time = 30;
         var ball1 = document.getElementById('ball1');
@@ -79,7 +85,7 @@
         
         var velocityX3 = 3;
         var velocityY3 = 3;
-        var positionX3 = 0;
+        var positionX3 = 100;
         var positionY3 = 0;
         var ball3 = document.getElementById('ball3');
         var reverseX3 = false;
@@ -87,20 +93,18 @@
         
         var velocityX4 = 2;
         var velocityY4 = 2;
-        var positionX4 = 0;
+        var positionX4 = 200;
         var positionY4 = 0;
         var ball4 = document.getElementById('ball4');
         var reverseX4 = false;
         var reverseY4 = false;
         
         var initialpositionx = 0;
-        var finalpositionx = 1000;
+        var pageWidth = window.innerWidth;
         var initialpositiony = 0;
-        var finalpositiony = 500;
-        var initialpositionx2 = 600;
-        var finalpositionx2 = 900;
+        var initialpositionx2 = 0;
         var initialpositiony2 = 0;
-        var finalpositiony2 = 500;
+
         
         // YOUR CODE 
         // *As a next step, you'll make this movement two 
@@ -118,7 +122,7 @@
             ball1.style.left = positionX + "px";
           }
         
-          if( positionX > finalpositionx || 
+          if( positionX > pageWidth || 
               positionX === initialpositionx 
           ) {
             reverseX = !reverseX;
@@ -131,7 +135,7 @@
             ball1.style.top = positionY + "px";
           }
           if( 
-              positionY > finalpositiony ||
+              positionY > pageWidth ||
               positionY === initialpositiony
             ){
               reverseY = !reverseY;
@@ -161,7 +165,7 @@
             ball2.style.left = positionX2 + "px";
           }
         
-          if( positionX2 > finalpositionx2 || 
+          if( positionX2 > pageWidth || 
               positionX2 === initialpositionx2
           ) {
             reverseX2 = !reverseX2;
@@ -174,7 +178,7 @@
             ball2.style.top = positionY2 + "px";
           }
           if( 
-              positionY2 > finalpositiony2 ||
+              positionY2 > pageWidth ||
               positionY2 === initialpositiony2
             ){
               reverseY2 = !reverseY2;
@@ -203,7 +207,7 @@
             ball3.style.left = positionX3 + "px";
           }
         
-          if( positionX3 > finalpositionx || 
+          if( positionX3 > pageWidth || 
               positionX3 === initialpositionx
           ) {
             reverseX3 = !reverseX3;
@@ -216,7 +220,7 @@
             ball3.style.top = positionY3 + "px";
           }
           if( 
-              positionY3 > finalpositiony ||
+              positionY3 > pageWidth ||
               positionY3 === initialpositiony
             ){
               reverseY3 = !reverseY3;
@@ -244,7 +248,7 @@
             ball4.style.left = positionX4 + "px";
           }
         
-          if( positionX4 > finalpositionx || 
+          if( positionX4 > pageWidth || 
               positionX4 === initialpositionx
           ) {
             reverseX4 = !reverseX4;
@@ -257,7 +261,7 @@
             ball4.style.top = positionY4 + "px";
           }
           if( 
-              positionY4 > finalpositiony ||
+              positionY4 > pageWidth ||
               positionY4 === initialpositiony
             ){
               reverseY4 = !reverseY4;
